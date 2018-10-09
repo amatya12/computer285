@@ -1,0 +1,258 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+/* CSS Document */
+
+.header-text {
+    font-size: 14px;
+}
+
+
+
+
+    #MyNavbar {
+        background-color: green;
+    }
+
+    .header-text {
+        font-size: 10.1px;
+    }
+}
+
+.font-1 i {
+    margin-left: 5%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Arial;
+    font-weight: bold;
+}
+
+.font-1 i {
+    margin-left: 5%;
+}
+
+
+
+.navbar-nav.nav li a {
+    rgba(12, 13, 13, 0.91);
+}
+
+
+
+
+    .navbar-nav.nav li a div {
+        transform: skewX(22deg);
+    }
+
+.navbar-nav.nav li a {
+    transform: skewX(-22deg);
+    width: 100%;
+    font-weight: bold;
+    margin-top: 3em;
+}
+
+
+  
+.image-logo {
+    transform: skewX(30deg);
+    width: 300px;
+    padding: 2%;
+}
+
+.media-carousel .carousel-control {
+    opacity: 4.0;
+}
+
+    .media-carousel .carousel-control.right {
+        margin-right: 1%;
+    }
+
+    .media-carousel .carousel-control.left {
+        margin-left: 1%;
+    }
+
+    .media-carousel .carousel-control i {
+        margin-top: 110%;
+        border-radius: 100%;
+        border: 2px solid #161616;
+        background-color: #161616;
+        width: 50px;
+        height: 50px;
+        line-height: 20px;
+        padding: 14px;
+        vertical-align: middle;
+    }
+
+.media-carousel .carousel-control {
+    height: 0;
+}
+
+    .media-carousel .carousel-control i:hover {
+        border: 2px solid #df9f15;
+        background-color: #df9f15;
+    }
+
+.carousel-caption img {
+    margin-top: -90%;
+    animation-delay: 1s;
+}
+
+.carousel-caption h1 {
+    margin-top: -38%;
+    animation-delay: 2s;
+    font-size: 40px;
+}
+
+.carousel-caption p {
+    animation-delay: 3s;
+    font-size: 20px;
+}
+
+.header-text {
+    font-size: 14px;
+}
+
+
+
+    .carousel-caption img {
+        margin-top: -10%;
+        animation-delay: 1s;
+        width: 10%;
+    }
+
+    .carousel-caption h1 {
+        margin-top: -2%;
+        animation-delay: 2s;
+        font-size: 15px;
+    }
+
+    .carousel-caption p {
+        animation-delay: 3s;
+        font-size: 10px;
+    }
+
+    .media-carousel .carousel-control i {
+        border-radius: 100%;
+        border: 2px solid #161616;
+        background-color: #161616;
+        width: 30px;
+        height: 30px;
+        line-height: 20px;
+        padding: 5px;
+        vertical-align: middle;
+        margin-top: 6em;
+        font-size: 10px;
+    }
+
+    .header-text {
+        font-size: 10.1px;
+    }
+}
+
+@media only screen and (min-width:580px) and (max-width:900px) {
+
+    .carousel-caption img {
+        margin-top: -40%;
+        animation-delay: 1s;
+    }
+
+    .carousel-caption h1 {
+        margin-top: -10%;
+        animation-delay: 2s;
+    }
+
+    .carousel-caption p {
+        animation-delay: 3s;
+    }
+
+    .media-carousel .carousel-control i {
+        margin-top: 5em;
+    }
+}
+
+section {
+    padding: 60px 0;
+}
+
+    section .section-title {
+        text-align: center;
+        color: #007b5e;
+        margin-bottom: 50px;
+        text-transform: uppercase;
+    }
+
+#footer {
+    background: #007b5e !important;
+}
+
+    #footer h5 {
+        padding-left: 10px;
+        border-left: 3px solid #eeeeee;
+        padding-bottom: 6px;
+        margin-bottom: 20px;
+        color: #ffffff;
+    }
+
+    #footer a {
+        color: blue;
+        text-decoration: none !important;
+        background-color: transparent;
+        -webkit-text-decoration-skip: objects;
+    }
+
+    #footer ul.social li {
+        padding: 3px 0;
+    }
+
+        #footer ul.social li a i {
+            margin-right: 5px;
+            font-size: 25px;
+            -webkit-transition: .5s all ease;
+            -moz-transition: .5s all ease;
+            transition: .5s all ease;
+        }
+
+        #footer ul.social li:hover a i {
+            font-size: 30px;
+            margin-top: -10px;
+        }
+
+        #footer ul.social li a,
+        #footer ul.quick-links li a {
+            color: #ffffff;
+        }
+
+            #footer ul.social li a:hover {
+                color: #eeeeee;
+            }
+
+    #footer ul.quick-links li {
+        padding: 3px 0;
+        -webkit-transition: .5s all ease;
+        -moz-transition: .5s all ease;
+        transition: .5s all ease;
+    }
+
+        #footer ul.quick-links li:hover {
+            padding: 3px 0;
+            margin-left: 5px;
+            font-weight: 700;
+        }
+
+        #footer ul.quick-links li a i {
+            margin-right: 5px;
+        }
+
+        #footer ul.quick-links li:hover a i {
+            font-weight: 700;
+        }
+
+
+    #footer h5 {
+        padding-left: 0;
+        border-left: transparent;
+        padding-bottom: 0px;
+        margin-bottom: 10px;
+    }
+}
