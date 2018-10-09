@@ -1,86 +1,189 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Scripts.Render("~/bundles/modernizr")
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <style>
-        body {
-            background: linear-gradient(to left, #1c92d2, #f2fcfe);
-        }
+    <title>DealMart</title>
 
-        .active {
-            color: black;
-        }
-    </style>
+
+    <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+
+    <link href="assets/plugins/ionicons/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="assets/css/animated.css" />
+
+    <!-- Theme Css -->
+    <link href="~/Stylesheet/Car.css" rel="stylesheet" />
+    <link href="~/Stylesheet/new.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+
 </head>
 <body>
-    <br />
-    <ul class="nav justify-content-center">
-        <li class="nav-item">
-            <a class="nav-link active" href="#"><i class="fas fa-users"></i> About Us</a>
-        </li>
-        <li class="nav-item">&nbsp;</li>
-        <li class="nav-item">&nbsp;</li>
-        <li class="nav-item">&nbsp;</li>
-        <li class="nav-item">
-            <a class="nav-link active" href="#"><i class="fas fa-list"></i> Catagories</a>
-        </li>
-        <li class="nav-item">&nbsp;</li>
-        <li class="nav-item">&nbsp;</li>
-        <li class="nav-item">&nbsp;</li>
-        <li class="nav-item">
-            <a href="http://localhost:59022"><img style="height: 105px;margin-top: -30px;" src="~/img/dealmart_logo.png" alt="logo" /></a>
-        </li>
-        <li class="nav-item">&nbsp;</li>
-        <li class="nav-item">&nbsp;</li>
-        <li class="nav-item">&nbsp;</li>
-        <li class="nav-item">
-            <a class="nav-link active" href="#"><i class="fas fa-cart-plus"></i> My Cart</a>
-        </li>
-        <li class="nav-item">&nbsp;</li>
-        <li class="nav-item">&nbsp;</li>
-        <li class="nav-item">&nbsp;</li>
-        <li class="nav-item">
-            <a class="nav-link active" href=" http://localhost:59022/Authentication/Register"><i class="fas fa-user-plus"></i>Not Registered yet?</a>
-        </li>
-        <li class="nav-item">&nbsp;</li>
-        <li class="nav-item">&nbsp;</li>
-        <li class="nav-item">&nbsp;</li>
-        <li class="nav-item">
-            @if (Session["Id"] == null)
-            {
-                <a class="nav-link active" href="http://localhost:59022/Authentication/Login"><i class="fas fa-user"></i> Sign In</a>
-            }
-            else
-            {
-                <a class="nav-link active" href="http://localhost:59022/Authentication/Signout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    <!-- wrapper -->
+    <div id="wrapper">
+        <div id="header" class="sticky header-sm clearfix">
+            <!-- TOP NAV -->
+            <header id="topNav">
+                <div class="container">
+                    <div class="row">
+                        <nav id="mainNav" class="navbar navbar-default">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                                </button>
+                                <a class="navbar-brand page-scroll" href="#page-top"><img src="~/img/concern.png" alt=""> </a>
+                            </div>
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li class="dropdown mega-dropdown">
+                                        <a href="#">Home </a>
 
-            }
+                                    </li>
+                                    <li class="dropdown mega-dropdown">
+                                        <a href="#">Categories</a>
 
+                                    </li>
+                                    <li>
+                                        <a href="#">Service</a>
 
-        </li>
-        <li>@Html.ActionLink("Product", "Index","Product")</li>
-    </ul>
-    <div class="container body-content">
+                                    </li>
+                                    <li>
+                                        <a href="#">Shop</a>
+
+                                    </li>
+                                    <li>
+                                        <a href="#">Review</a>
+
+                                    </li>
+                                    <li>
+                                        <a href="http://localhost:59022/Authentication/Login"> login</a>
+
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#"><i class="fa fa-shopping-cart"></i></a>
+
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="false"><i class="fa fa-search"></i></a>
+
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- /.navbar-collapse -->
+                            <!-- /.container-fluid -->
+                        </nav>
+                    </div>
+                </div>
+            </header>
+        </div>
+
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+        <div class="container-fluid footer">
+            <div class="container">
+                <div class="row">
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+
+
+                    <div class="col-sm-6 col-md-4">
+                        <h5>Quick links</h5>
+                        <ul class="list-unstyled quick-links">
+                            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
+                            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
+                            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+                            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
+                            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Videos</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                        <h4>About Dealmart </h4>
+                        <p>
+                            We are good.Fucking good
+                        </p>
+                        <div class="social-network">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa  fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                            <a href="#"><i class="fa fa-vimeo"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <h4>Contact Us </h4>
+                        <p> No hesitation for asking. We are available for you.We could add online feature next month though </p>
+                        <div class="address">
+                            <p><i class="fa fa-map-marker"></i> &nbsp;&nbsp;&nbsp;1000 Noorth oak street ,Hmmaond ,LA,70401 </p>
+                            <p><i class="fa fa-phone"></i> &nbsp;&nbsp; +1347348324343 </p>
+                            <p><i class="fa fa-envelope-o"></i>&nbsp;&nbsp;www.Deal-Mart.com </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="topcontrol" title="Scroll Back to Top" style="position: fixed; bottom: 5px; right: 5px; opacity: 1; cursor: pointer;"></div>
+        </div>
+        <div class="terms">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7 col-sm-7">
+
+                    </div>
+                    <div class="col-md-5 col-sm-5 text-right">
+                        <span>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa  fa-google-plus"></i></a>
+                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                            <a href="#"><i class="fa fa-vimeo"></i></a>
+                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                            <a href="#"><i class="fa fa-rss"></i></a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- jQuery -->
+        <script src="assets/plugins/jquery/js/jquery-2.2.3.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <script src="js/wow.min.js"></script>
+
+
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+
+        <script>
+
+            $(window).on('load', function () { // makes sure the whole site is loaded
+                $('#status').fadeOut(); // will first fade out the loading animation
+                $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+                $('body').delay(350).css({ 'overflow': 'visible' });
+            });
+
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 1) {
+                    $('#header').addClass("fixed");
+                }
+                else {
+                    $('#header').removeClass("fixed");
+                }
+            });
+        </script>
 </body>
 </html>
-
-

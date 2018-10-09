@@ -1,0 +1,250 @@
+﻿/* Globals*/
+body {
+    color: #636363;
+    background-color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Top Navigation */
+.navbar-default {
+    background-color: #fff;
+    border-color: #fff;
+    padding: 0px;
+    margin-top: 20px !important;
+}
+
+.navbar-brand img {
+    height: 100%;
+}
+
+.navbar-default .navbar-nav > li > a {
+    text-transform: uppercase;
+    font-size: 16px;
+    text-align: center;
+    padding-bottom: 0px;
+}
+
+    .navbar-default .navbar-nav > li > a:hover {
+        color: #277b26;
+    }
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
+    background: #298d3a00;
+}
+
+.navbar-default .navbar-nav > li > a:after {
+    content: "\f38b";
+    font-family: "Ionicons";
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    color: #a25b5b;
+}
+
+
+
+.navbar-default ul li {
+    background: none;
+    padding-left: 0px;
+    list-style: none;
+    padding-bottom: 0px;
+}
+
+#header.fixed {
+    position: fixed;
+    border-bottom: rgba(0,0,0,0.08) 1px solid;
+}
+
+
+/**/.navbar-default .navbar-nav > li > a:after {
+    content: "\f38b";
+    font-family: "Ionicons";
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    color: transparent;
+}*/
+/************************ MEGA MENU*******************/
+
+
+
+h1.center {
+    margin: 0 auto;
+    float: none;
+    display: table;
+}
+
+h1.no-border {
+    border: none;
+}
+
+
+
+
+
+
+
+.round_img {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.testimonial .row {
+    margin-top: 12px;
+}
+
+small {
+    font-family: 'Lato', sans-serif;
+}
+
+/* About Page */
+
+
+
+
+#header {
+    position: relative;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #fff;
+    border: none;
+    -webkit-box-shadow: 0 0 2px rgba(0,0,0,.1) !important;
+    -moz-box-shadow: 0 0 2px rgba(0,0,0,.1) !important;
+    box-shadow: 0 0 2px rgba(0,0,0,.1) !important;
+    -webkit-transition: all .800s;
+    -moz-transition: all .800s;
+    -o-transition: all .800s;
+    transition: all .800s;
+}
+
+    #header.fixed .navbar-default {
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+        -moz-transition: all 0.3s ease-out; /* FF4+ */
+        -o-transition: all 0.3s ease-out; /* Opera 10.5+ */
+        -webkit-transition: all 0.3s ease-out; /* Saf3.2+, Chrome */
+        -ms-transition: all 0.3s ease-out; /* IE10 */
+        transition: all 0.3s ease-out;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+/*  Footer */
+.footer {
+    background-color: #171717;
+    font-size: 14px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    color: #d2d2d2;
+}
+
+.container-fluid.footer {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.footer h4 {
+    color: #FFFFFF;
+    font-size: 16px;
+    padding-bottom: 5px;
+    border-bottom: 3px solid #0084b4;
+    width: 110px;
+    text-transform: none;
+}
+
+.footer ul li {
+    color: #d2d2d2;
+    list-style: none;
+    border-bottom: 1px solid #363636;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    list-style: none;
+}
+
+.footer ul {
+    padding: 0px;
+}
+
+    .footer ul li p {
+        color: #494949;
+        font-size: 12px;
+        margin-top: 3px;
+    }
+
+.footer p {
+    margin-top: 18px;
+    font-size: 14px;
+    color: #777777;
+}
+
+.address p {
+    color: #ffffff;
+    margin: 0px;
+    line-height: 26px;
+}
+
+.twitter i {
+    color: #086080;
+    margin-right: 10px;
+}
+
+.terms {
+    background-color: #111111;
+    color: #777777;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 14px;
+}
+
+.social-network a {
+    color: #FFFFFF;
+    font-size: 17px;
+    margin-right: 16px;
+    transition: all 0.35s ease 0.3s;
+}
+
+    .social-network a:hover {
+        color: #0084b4;
+    }
+
+    .social-network a i {
+        font-size: 20px;
+    }
+
+.terms a {
+    color: #777777;
+    margin-left: 12px;
+    font-size: 14px;
+    transition: all 0.35s ease 0.3s;
+}
+
+    .terms a:hover {
+        color: #0084b4;
+    }
+
+.footer ul li {
+    background: none;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    color: #777777;
+}
