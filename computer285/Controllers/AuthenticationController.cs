@@ -73,6 +73,7 @@ namespace computer285.Controllers
             {
                 Session["Id"] = userInDb.Id.ToString();
                 Session["Username"] = userInDb.Username.ToString();
+                Session["Role"] = userInDb.Role;
                 return RedirectToAction("LoggedIn");
             }
 

@@ -157,6 +157,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AuthenticationController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Global.asax.cs">
@@ -171,6 +172,10 @@
     <Compile Include="Migrations\201809250619435_add.cs" />
     <Compile Include="Migrations\201809250619435_add.Designer.cs">
       <DependentUpon>201809250619435_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810092343400_Added role to User model.cs" />
+    <Compile Include="Migrations\201810092343400_Added role to User model.Designer.cs">
+      <DependentUpon>201810092343400_Added role to User model.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Products.cs" />
@@ -233,6 +238,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -256,6 +262,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201809250619435_add.resx">
       <DependentUpon>201809250619435_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810092343400_Added role to User model.resx">
+      <DependentUpon>201810092343400_Added role to User model.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
