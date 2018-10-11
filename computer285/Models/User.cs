@@ -6,6 +6,11 @@ namespace computer285.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
+    public enum Role
+    {
+        USER,
+        ADMIN
+    }
     [Table("User")]
     public partial class User
     {
@@ -38,5 +43,8 @@ namespace computer285.Models
         [Required(ErrorMessage = "Lastname is required.")]
         [StringLength(100)]
         public string LastName { get; set; }
+
+
+        public Role Role { get; set; } = Role.USER;
     }
 }
