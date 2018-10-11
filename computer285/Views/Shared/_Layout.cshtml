@@ -44,7 +44,7 @@
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav navbar-right">
                                     <li class="dropdown mega-dropdown">
-                                        <a href="#">Home </a>
+                                        <a href="http://localhost:59022">Home </a>
 
                                     </li>
                                     <li class="dropdown mega-dropdown">
@@ -60,7 +60,15 @@
 
                                     </li>
                                     <li>
-                                        <a href="#">Sign up</a>
+                                        @if (Session["Id"] == null)
+                                        {
+                                            <a href="http://localhost:59022/Authentication/Login"> SignUp</a>
+                                        }
+                                        else
+                                        {
+                                            <a href="http://localhost:59022/Authentication/LoggedIn"> @Session["Username"].ToString()</a>
+
+                                        }
 
                                     </li>
                                     <li cl>
@@ -102,18 +110,17 @@
                     <div class="col-sm-6 col-md-4">
                         <h5>Quick links</h5>
                         <ul class="list-unstyled quick-links">
-                            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
+                            <li><a href="http://localhost:59022"><i class="fa fa-angle-double-right"></i>Home</a></li>
                             <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
                             <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
-                            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
-                            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Videos</a></li>
+                            
                         </ul>
                     </div>
 
                     <div class="col-md-4 col-sm-6">
                         <h4>About Dealmart </h4>
                         <p>
-                            We are good.Fucking good
+                            We are good.We provide the quality services to the customers.We also deal with the foreign customers.
                         </p>
                         <div class="social-network">
                             <a href="#"><i class="fa fa-facebook"></i></a>
@@ -148,10 +155,8 @@
                             <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
                             <a href="#"><i class="fa  fa-google-plus"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-vimeo"></i></a>
-                            <a href="#"><i class="fa fa-pinterest"></i></a>
-                            <a href="#"><i class="fa fa-rss"></i></a>
+                            
+                            
                         </span>
                     </div>
                 </div>
