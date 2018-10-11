@@ -9,15 +9,21 @@ using System.Web.Mvc;
 
 namespace computer285.Controllers
 {
-    [Authorize(Users = "aakash")]
-    public class ProductController : Controller
+    
+    public class ProductController : BaseController
     {
         private OurDbContext db = new OurDbContext();
 
-
+        public ProductController()
+        {
+            
+        }
        
         public ActionResult Find(String searchkey=null)
         {
+            
+            
+
             return View(db.Products.Where(x => x.ProductName.StartsWith(searchkey)||searchkey==null).ToList());
         }
        
@@ -26,29 +32,42 @@ namespace computer285.Controllers
         // GET: Product
         public ActionResult Index()
         {
-           return View(db.Products.ToList());
+            if (!IsAdmin())
+            {
+                return UnauthorizedOrSendToLoginPage();
+            }
+
+            return View(db.Products.ToList());
             
         }
 
         // GET: Product/Details/5
         public ActionResult Details(int? Id)
         {
-            if (Id == null)
+
+            if (!IsAdmin())
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Products product = db.Products.Find(Id);
-            if (product == null)
-            {
-                return HttpNotFound();
+                return UnauthorizedOrSendToLoginPage();
             }
             else
             {
-                View(product);
+                if (Id == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }
+                Products product = db.Products.Find(Id);
+                if (product == null)
+                {
+                    return HttpNotFound();
+                }
+                else
+                {
+                    View(product);
+                }
+
+
+                return View();
             }
-
-
-            return View();
         }
 
         // GET: Product/Create
@@ -61,40 +80,57 @@ namespace computer285.Controllers
         // POST: Product/Create
         [HttpPost]
         public ActionResult Create(Products product)
+
         {
-            try
+
+            if (!IsAdmin())
             {
-                // TODO: Add insert logic here
-                if (ModelState.IsValid)
+                return UnauthorizedOrSendToLoginPage();
+            }
+            else
+            {
+                try
                 {
-                    db.Products.Add(product);
-                    db.SaveChanges();
-                    return RedirectToAction("Index");
+                    // TODO: Add insert logic here
+                    if (ModelState.IsValid)
+                    {
+                        db.Products.Add(product);
+                        db.SaveChanges();
+                        return RedirectToAction("Index");
+
+                    }
+                    return View(product);
+
 
                 }
-                return View(product);
-
-
-            }
-            catch
-            {
-                return View();
+                catch
+                {
+                    return View();
+                }
             }
         }
 
         // GET: Product/Edit/5
         public ActionResult Edit(int? Id)
         {
-            if (Id == null)
+
+            if (!IsAdmin())
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                return UnauthorizedOrSendToLoginPage();
             }
-            Products product = db.Products.Find(Id);
-            if (product == null)
+            else
             {
-                return HttpNotFound();
+                if (Id == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }
+                Products product = db.Products.Find(Id);
+                if (product == null)
+                {
+                    return HttpNotFound();
+                }
+                return View();
             }
-            return View();
         }
 
         // POST: Product/Edit/5
@@ -104,17 +140,11 @@ namespace computer285.Controllers
             Products product = db.Products.Find(id);
             try
             {
-                /*  if(ModelState.IsValid)
-                  {
-                      db.Entry(product).State = System.Data.Entity.EntityState.Modified;
-                      db.SaveChanges();
-                      return RedirectToAction("Index");
-                  }
-                  return View(product);*/
+               
 
                 UpdateModel(product);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return View(product);
             }
 
             catch
@@ -126,18 +156,26 @@ namespace computer285.Controllers
         // GET: Product/Delete/5
         public ActionResult Delete(int? id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
 
-            }
-            Products product = db.Products.Find(id);
-            if (product == null)
+            if (!IsAdmin())
             {
-                HttpNotFound();
+                return UnauthorizedOrSendToLoginPage();
             }
+            else
+            {
+                if (id == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
 
-            return View();
+                }
+                Products product = db.Products.Find(id);
+                if (product == null)
+                {
+                    HttpNotFound();
+                }
+
+                return View();
+            }
         }
 
         // POST: Product/Delete/5

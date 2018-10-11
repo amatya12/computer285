@@ -32,6 +32,7 @@ namespace computer285.Controllers
                 var userNameExists = _dbContext.User.SingleOrDefault(u => u.Username == user.Username);
                 if (userNameExists == null)
                 {
+                    // created new model
                     user.Password = Authentication.Hash(user.Password);
                     _dbContext.User.Add(user);
                     _dbContext.SaveChanges();
@@ -72,6 +73,7 @@ namespace computer285.Controllers
             {
                 Session["Id"] = userInDb.Id.ToString();
                 Session["Username"] = userInDb.Username.ToString();
+                Session["Role"] = userInDb.Role;
                 return RedirectToAction("LoggedIn");
             }
 
