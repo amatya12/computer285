@@ -1,4 +1,4 @@
-﻿/* Globals*/
+﻿
 body {
     color: #636363;
     background-color: #fff;
@@ -98,7 +98,7 @@ h1.no-border {
     border-radius: 50%;
 }
 
-.testimonial .row {
+.review .row {
     margin-top: 12px;
 }
 
